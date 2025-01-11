@@ -13,7 +13,7 @@ export default {
         'New feature': 'New feature 🔥',
     },
     entities               : [ 'App' ],
-    pattern                : `{{type}} : {{entities}} - {{message}}`,
+    pattern                : `{{type}} : {{entities}} - {{message}}{{postfixes}}`,
     gitFolder              : gitFolder,
     gitRemoteRepositoryName: 'origin',
     gitPushDefault         : true,

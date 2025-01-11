@@ -423,10 +423,10 @@ export default createPrompt(
         const _input        = searchIsActive
                               ? searchValue
                                 ? `[${ searchValue }]`
-                                : inputTheme.style.help('[Введите значение]')
+                                : inputTheme.style.help('[Search is empty]')
                               : searchValue
                                 ? inputTheme.style.highlight(`[${ searchValue }]`)
-                                : inputTheme.style.help('[Поиск]');
+                                : inputTheme.style.help('[Write]');
         const _errorMessage = errorMessage ? `\n${ errorMessage }` : '';
         const _page         = page ? page
                                    : inputTheme.style.help('Nothing found');
@@ -435,6 +435,6 @@ export default createPrompt(
         // так и не понял
         const _hideCursorSym = `\u001B[?25l`;
 
-        return `${ _help }${ prefix } ${ _message }: ${ _input }${ _errorMessage }\n${ _page }${ _hideCursorSym }`;
+        return `${ _help }${ prefix } ${ _message } ${ _input }${ _errorMessage }\n${ _page }${ _hideCursorSym }`;
     },
 );
