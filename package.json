@@ -1,0 +1,34 @@
+{
+    "name": "@vanyamate/inquirer-checkbox-with-search",
+    "version": "0.0.1",
+    "description": "Prompt for inquirer. Checkbox with search",
+    "keywords": [
+        "Inquirer",
+        "Prompt",
+        "Checkbox",
+        "Search"
+    ],
+    "license": "ISC",
+    "author": "VanyaMate",
+    "type": "module",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/VanyaMate/inquirer-checkbox-with-search.git"
+    },
+    "scripts": {
+        "build": "tsc",
+        "commit": "tsx utils/git/commiter.ts"
+    },
+    "devDependencies": {
+        "@inquirer/prompts": "^7.2.1",
+        "tsx": "^4.19.2",
+        "typescript": "^5.7.3"
+    },
+    "dependencies": {
+        "@vanyamate/commiter": "^0.0.7",
+        "@vanyamate/types-kit": "^0.0.15",
+        "inquirer": "^12.3.0"
+    }
+}
