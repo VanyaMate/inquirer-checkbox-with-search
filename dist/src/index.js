@@ -145,7 +145,7 @@ export default createPrompt((config, done) => {
     if (status === 'done') {
         const selectedItems = checkboxTheme.style.highlight(checkboxTheme.style.renderSelectedChoices(originalItems.filter(notSeparator).filter(checked), originalItems));
         // Префикс, сообщение и выбранные элементы
-        return `${prefix} ${message}: ${selectedItems}`;
+        return `${prefix} ${message} ${selectedItems}`;
     }
     // При изменении оригинального списка со всеми элементами или поиска
     // - список отфильтруется и покажется новый

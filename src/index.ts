@@ -280,7 +280,7 @@ export default createPrompt(
             );
 
             // Префикс, сообщение и выбранные элементы
-            return `${ prefix } ${ message }: ${ selectedItems }`;
+            return `${ prefix } ${ message } ${ selectedItems }`;
         }
 
         // При изменении оригинального списка со всеми элементами или поиска
