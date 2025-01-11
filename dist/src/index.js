@@ -150,7 +150,7 @@ export default createPrompt((config, done) => {
     // При изменении оригинального списка со всеми элементами или поиска
     // - список отфильтруется и покажется новый
     const filteredItems = useMemo(() => {
-        if (searchValue) {
+        if (searchValue.trim()) {
             return originalItems.filter((item) => filterItem(item, searchValue));
         }
         else {
@@ -202,7 +202,15 @@ export default createPrompt((config, done) => {
                 // Если нажата любая другая клавиша
                 else {
                     // Записать текущий ввод в поиск
-                    setSearchValue(rl.line);
+                    const line = rl.line;
+                    if (line.trim()) {
+                        setSearchValue(line);
+                    }
+                    else {
+                        setSearchValue('');
+                        rl.clearLine(0);
+                        rl.write('');
+                    }
                 }
             }
             // Если не нажат CTRL и поиск не активен

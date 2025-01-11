@@ -1,6 +1,6 @@
 {
     "name": "@vanyamate/inquirer-checkbox-with-search",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Prompt for inquirer. Checkbox with search",
     "keywords": [
         "Inquirer",
