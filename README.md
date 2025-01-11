@@ -1,4 +1,20 @@
-import inquirerCheckboxWithSearch from './src/index';
+# Inquirer checkbox with search
+
+## Install
+
+```shell
+npm i @vanyamate/inquirer-checkbox-with-search
+```
+
+![img.png](img.png)
+![img_1.png](img_1.png)
+
+## Usage
+
+almost like default `checkbox`
+
+```typescript
+import inquirerCheckboxWithSearch from '@vanyamate/inquirer-checkbox-with-search';
 
 
 inquirerCheckboxWithSearch({
@@ -27,5 +43,6 @@ inquirerCheckboxWithSearch({
         },
     },
     input   : {},
-})
-    .then((response) => console.log(response));
+});
+```
+        

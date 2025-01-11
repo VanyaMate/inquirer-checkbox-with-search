@@ -286,11 +286,11 @@ export default createPrompt((config, done) => {
     const _message = inputTheme.style.message(message, 'idle');
     const _input = searchIsActive
         ? searchValue
-            ? `[${searchValue}]`
-            : inputTheme.style.help('[Search is empty]')
+            ? `[${searchValue}] <--`
+            : inputTheme.style.help('[You can write..] <--')
         : searchValue
             ? inputTheme.style.highlight(`[${searchValue}]`)
-            : inputTheme.style.help('[Write]');
+            : inputTheme.style.help('[Search is empty]');
     const _errorMessage = errorMessage ? `\n${errorMessage}` : '';
     const _page = page ? page
         : inputTheme.style.help('Nothing found');
