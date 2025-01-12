@@ -283,6 +283,7 @@ export default createPrompt((config, done) => {
     // Подсказки
     const helpRows = [
         `${checkboxTheme.style.key('space')} to select`,
+        `${checkboxTheme.style.key('ctrl + s')} to toggle search`,
         `${checkboxTheme.style.key('a')} to select all`,
         `${checkboxTheme.style.key('x')} to unselect all`,
         `${checkboxTheme.style.key('i')} to invert selection`,
@@ -304,6 +305,7 @@ export default createPrompt((config, done) => {
         : inputTheme.style.help('Nothing found');
     // Как сделать так, чтобы курсор был в том месте, где я ввожу я -
     // так и не понял
+    // Это символ который убирает курсор
     const _hideCursorSym = `\u001B[?25l`;
     return `${_help}${prefix} ${_message} ${_input}${_errorMessage}\n${_page}${_hideCursorSym}`;
 });
